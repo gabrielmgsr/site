@@ -208,11 +208,111 @@ body {
     color: #fff;
 }
 
+.photo-card img {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1001;
+    background: #1a1a1e;
+    border: 1px solid #323238;
+    border-radius: 16px;
+    max-width: 720px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    background: #121214;
+    display: block;
+}
+
+.modal-details {
+    padding: 18px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1002;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #323238;
+    background: #25252b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: #ff6b81;
+}
+
 footer {
     padding: 25px;
     background: #09090a;
     color: #82828c;
     font-size: 0.9rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #25252b;
+    border-top: 1px solid #323238;
+}
+
+.card-actions .btn-download,
+.card-actions .btn-delete {
+    flex: 1;
+    border-top: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-delete {
+    background: rgba(255, 71, 87, 0.15);
+    color: #ff6b81;
+    border: 1px solid rgba(255, 71, 87, 0.4);
+}
+
+.btn-delete:hover {
+    background: #ff4757;
+    color: #fff;
 }
 
 @media (max-width: 600px) {

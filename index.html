@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>coisas
-        
+
     </title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -85,6 +85,21 @@
     <footer>
         <p>Feito com todo meu amor para você ❤️</p>
     </footer>
+
+    <!-- Modal de Visualização da Foto -->
+    <div id="photo-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button type="button" id="modal-close" class="modal-close" aria-label="Fechar">✕</button>
+            <img id="modal-img" src="" alt="Foto ampliada">
+            <div class="modal-details">
+                <div id="modal-date" class="photo-date"></div>
+                <p id="modal-desc" class="photo-caption"></p>
+                <a id="modal-download" href="#" download="momento.jpg" class="btn-download">Baixar Foto 📥</a>
+                <button type="button" id="modal-delete" class="btn-delete">Excluir Foto 🗑️</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
